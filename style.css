@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: gris;
+    place-items: center;
+}
+
+body {
+    background: radial-gradient(circle, #182b38, #08111d);
+    color: white;
+    font-family: arial;
+}
+
+.scene {
+    position: relative;
+    width: 630px;
+    height: 630px;
+    perspective: 1000px;
+}
+
+.neon-ring {
+    position: absolute;
+    inset: 0;
+    background: conic-gradient(#00ffff 70%, #006cff 79%, ff00e6 86%, #00ffff 93%);
+}
+
+.neon-ring {
+    border-radius: 50%;
+}
+
+.neon-ring::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border-radius: 50%;
+    background: #101c28;
+}
+
+.neon-ring {
+    filter: drop-shadow(0 0 14px #00ffff);
+}
+
+.neon-ring {
+    animation:
+        ringRotate 3s linear infinite;
+}
+
+@keyframes ringRotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.card {
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.face {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.face {
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+h2 {
+    font-size: 32px;
+    color: #76ffef;
+    text-shadow: 0 0 8px #00ffff80;
+}
+
+.face p {
+    font-size: 14px;
+    color: #91a6b4;
+    margin: 8px 0 24px;
+}
+
+.face>input {
+    width: 370px;
+    height: 58px;
+    margin-bottom: 22px;
+    padding: 0 22px;
+    font-size: 18px;
+}
+
+.face>input {
+    border-radius: 29px;
+}
+
+.face>input {
+    background: #050f18;
+    color: #d8e9ef;
+    border: 2px solid #15232e;
+    box-shadow: inset 0 3px 8px #0008;
+}
+
+.face>input:focus {
+    outline: none;
+    border-color: #62ffe0;
+    box-shadow: 0 0 12px #00ffff70;
+}
+
+.options {
+    width: 370px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.button {
+    width: 370px;
+    height: 55px;
+    font: bold 18px arial;
+    cursor: pointer
+}
+
+button {
+    border-radius: 28px;
+}
+
+button {
+    color: #dffeff;
+    border: 2px solid #39867f;
+    background: linear-gradient(90deg, #123442, #102535);
+}
+
+button:hover {
+    border-color: #52d9c3;
+    box-shadow: 0 0 18px #00ffff80;
+}
+
+button:active {
+    transform: scale(.97)
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-shadow: 0 0 8px #00ffff;
+}
+
+.card {
+    transition: transform 1s ease;
+}
+
+.card.signup-mode {
+    transform: rotateY(180deg);
+}
